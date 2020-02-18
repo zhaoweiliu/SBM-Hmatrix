@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 # Compiled Object files
 **/.DS_Store
+=======
+# Prerequisites
+*.d
+
+# Compiled Object files
+>>>>>>> 744d229f6032ea089672298b6d8d0236302080c9
 *.slo
 *.lo
 *.o
@@ -28,6 +35,7 @@
 *.exe
 *.out
 *.app
+<<<<<<< HEAD
 
 **/cmake-build-debug
 **/CMakeCache.txt
@@ -53,3 +61,5 @@ include/*
 lib/*
 bin/*
 test/test_runner
+=======
+>>>>>>> 744d229f6032ea089672298b6d8d0236302080c9

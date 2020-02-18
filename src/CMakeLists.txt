@@ -1,9 +1,11 @@
 cmake_minimum_required(VERSION 3.2)
-project(divider)
+project(sbm_hmatrix)
 
-add_subdirectory(division)
+add_subdirectory(sbm)
 set(SOURCE_FILES main.cpp)
 
-add_executable(divider ${SOURCE_FILES})
-target_link_libraries(divider division)
-install(TARGETS divider DESTINATION ${DIVISIBLE_INSTALL_BIN_DIR})
+add_executable(sbm_hmatrix ${SOURCE_FILES})
+
+target_link_libraries(sbm_hmatrix sbm hpro)
+
+install(TARGETS sbm_hmatrix DESTINATION ${SBM_INSTALL_BIN_DIR})
