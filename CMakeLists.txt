@@ -13,18 +13,28 @@ set(SBM_INSTALL_LIB_DIR ${PROJECT_SOURCE_DIR}/lib)
 
 set(SBM_HEADERS_DIR ${PROJECT_SOURCE_DIR}/src/sbm)
 
-set(H_LIB_PRO_DIR ${PROJECT_SOURCE_DIR}/hlibpro-2.8/lib)
+# set(H_LIB_PRO_DIR ${PROJECT_SOURCE_DIR}/hlibpro-2.8/lib)
 set(TBB_DIRS ${PROJECT_SOURCE_DIR}/tbb)
 set(TBB_INCLUDE_DIRS ${TBB_DIRS}/include)
 set(TBB_LIB_DIRS ${TBB_DIRS}/lib)
 
+# Add the Hlib library required for fast dense matrix computations
+set(H_LIB_PRO_DIR "NOT-DEFINED" CACHE PATH "/opt")
+if(H_LIB_PRO_DIR)
+    include_directories(${H_LIB_PRO_DIR}/include)
+    link_directories(${H_LIB_PRO_DIR}/lib)
+else()
+    message("HlibPro directory not defined")
+    return()
+endif()
+
 include_directories(${SBM_INSTALL_INCLUDE_DIR})
 include_directories(${SBM_HEADERS_DIR})
 include_directories(${PROJECT_SOURCE_DIR}/include)
-include_directories("${PROJECT_SOURCE_DIR}/hlibpro-2.8/include/")
+# include_directories(${PROJECT_SOURCE_DIR}/hlibpro-2.8/include/)
 include_directories(${TBB_INCLUDE_DIRS})
 
-link_directories(${H_LIB_PRO_DIR})
+# link_directories(${H_LIB_PRO_DIR})
 link_directories(${TBB_LIB_DIRS})
 
 add_subdirectory(src)
