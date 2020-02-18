@@ -25,7 +25,7 @@ First we need to check out the git repo:
 ❯ mkdir ~/workspace
 ❯ cd ~/workspace
 ❯ git clone \
-    https://github.com/kigster/cmake-project-template \
+    https://github.com/zhaoweiliu/SBM-Hmatrix.git \
     my-project
 ❯ cd my-project
 ❯ bash build-and-run
