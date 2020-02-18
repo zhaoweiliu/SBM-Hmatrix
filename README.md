@@ -1,7 +1,7 @@
 
 # Singular Boundary Method with H-matrix
 
-### Developed based on from a CMake C++ Project Template
+### Developed based on a CMake C++ Project Template
 
 Thank you for your interest in this project!
 
